@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELite Studio — Создаём эмоции</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Лоадер -->
+    <div class="loader" id="loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Прогресс прокрутки -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Кастомный курсор -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- Частицы -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Навигация -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo-nav">
+                <span class="logo-e">E</span><span class="logo-lite">Lite</span> Studio
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#products">Услуги</a></li>
+                <li><a href="#gallery">Портфолио</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+                <li><a href="https://t.me/+riiZK5ONVAUzMDYy" target="_blank" class="nav-tg">📢 Канал</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="logo-e">E</span><span class="logo-lite">Lite</span> Studio
+            </h1>
+            <p class="hero-subtitle">Создаём эмоции. Делимся моментами.</p>
+            <p class="hero-desc">Уникальные анимационные открытки для особых событий вашей жизни</p>
+            <div class="hero-buttons">
+                <a href="#products" class="btn-primary">
+                    <span>✨</span>
+                    <span>Выбрать открытку</span>
+                </a>
+                <a href="https://t.me/Lucifer_Knyazev" target="_blank" class="btn-secondary">
+                    <span>✈️</span>
+                    <span>Написать нам</span>
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Листай вниз</span>
+        </div>
+    </section>
+
+    <!-- Статистика -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item reveal">
+                    <div class="stat-number" data-target="500">0</div>
+                    <div class="stat-label">Созданных открыток</div>
+                </div>
+                <div class="stat-item reveal">
+                    <div class="stat-number" data-target="350">0</div>
+                    <div class="stat-label">Довольных клиентов</div>
+                </div>
+                <div class="stat-item reveal">
+                    <div class="stat-number" data-target="50">0</div>
+                    <div class="stat-label">Уникальных дизайнов</div>
+                </div>
+                <div class="stat-item reveal">
+                    <div class="stat-number" data-target="24">0</div>
+                    <div class="stat-label">Часа на изготовление</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Продукты -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <h2 class="section-title gradient-text reveal">Наши услуги</h2>
+            <div class="cards-grid">
+                <div class="card card-mom reveal">
+                    <div class="card-shine"></div>
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <span class="card-icon">💐</span>
+                        <h3 class="card-title">Поздравление<br>для мамы</h3>
+                        <p class="card-desc">Красивая анимационная открытка с нежными цветами и тёплыми пожеланиями</p>
+                        <span class="price-tag">от 500 ₽</span>
+                        <a href="https://t.me/Lucifer_Knyazev" target="_blank" class="buy-btn" onclick="showNotification('Переходим в Telegram для заказа!')">
+                            <span>🛒</span>
+                            <span>Купить</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card card-invite reveal">
+                    <div class="card-shine"></div>
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <span class="card-icon">✨</span>
+                        <h3 class="card-title">Пригласительная</h3>
+                        <p class="card-desc">Стильное приглашение на свадьбу, день рождения или корпоратив</p>
+                        <span class="price-tag">от 700 ₽</span>
+                        <a href="https://t.me/Lucifer_Knyazev" target="_blank" class="buy-btn" onclick="showNotification('Переходим в Telegram для заказа!')">
+                            <span>🛒</span>
+                            <span>Купить</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card card-wedding reveal">
+                    <div class="card-shine"></div>
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <span class="card-icon">💍</span>
+                        <h3 class="card-title">Свадебная<br>открытка</h3>
+                        <p class="card-desc">Романтичное приглашение с нежными переходами и персонализацией</p>
+                        <span class="price-tag">от 900 ₽</span>
+                        <a href="https://t.me/Lucifer_Knyazev" target="_blank" class="buy-btn" onclick="showNotification('Переходим в Telegram для заказа!')">
+                            <span>🛒</span>
+                            <span>Купить</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card card-birthday reveal">
+                    <div class="card-shine"></div>
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <span class="card-icon">🎂</span>
+                        <h3 class="card-title">С днём<br>рождения</h3>
+                        <p class="card-desc">Яркая праздничная открытка с конфетти и персональным поздравлением</p>
+                        <span class="price-tag">от 500 ₽</span>
+                        <a href="https://t.me/Lucifer_Knyazev" target="_blank" class="buy-btn" onclick="showNotification('Переходим в Telegram для заказа!')">
+                            <span>🛒</span>
+                            <span>Купить</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Галерея -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <h2 class="section-title gradient-text reveal">Наши работы</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item reveal">
+                    <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?w=400" alt="Свадебная серия">
+                    <div class="gallery-overlay">
+                        <span>Свадебная серия</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal">
+                    <img src="https://images.unsplash.com/photo-1530103862676-de3c9a59aa38?w=400" alt="День рождения">
+                    <div class="gallery-overlay">
+                        <span>День рождения</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal">
+                    <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=400" alt="Для мамы">
+                    <div class="gallery-overlay">
+                        <span>Для мамы</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal">
+                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400" alt="Приглашение">
+                    <div class="gallery-overlay">
+                        <span>Приглашение</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section class="reviews-section" id="reviews">
+        <div class="container">
+            <h2 class="section-title gradient-text reveal">⭐ Отзывы наших клиентов</h2>
+            
+            <div class="reviews-list">
+                <div class="review-card reveal">
+                    <div class="review-header">
+                        <span class="review-name">Анна К.</span>
+                        <span class="review-date">2 дня назад</span>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Заказывала открытку для мамы на 8 марта — результат превзошёл все ожидания! Анимация плавная, музыка подобрана идеально."</p>
+                </div>
+                <div class="review-card reveal">
+                    <div class="review-header">
+                        <span class="review-name">Дмитрий и Елена</span>
+                        <span class="review-date">1 неделю назад</span>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Свадебные приглашения сделали за 2 дня! Гости до сих пор спрашивают, где заказывали. Рекомендую всем!"</p>
+                </div>
+                <div class="review-card reveal">
+                    <div class="review-header">
+                        <span class="review-name">Максим П.</span>
+                        <span class="review-date">3 дня назад</span>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Очень крутая идея с анимированными открытками! Заказал для друга на день рождения — теперь все хотят такие же."</p>
+                </div>
+            </div>
+
+            <div class="review-form-container reveal">
+                <h3>Оставить отзыв</h3>
+                <form class="review-form" id="reviewForm">
+                    <div class="form-group">
+                        <label>Ваше имя</label>
+                        <input type="text" id="reviewName" placeholder="Введите имя" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Оценка</label>
+                        <div class="star-rating" id="starRating">
+                            <span class="star active" data-value="1">★</span>
+                            <span class="star active" data-value="2">★</span>
+                            <span class="star active" data-value="3">★</span>
+                            <span class="star active" data-value="4">★</span>
+                            <span class="star active" data-value="5">★</span>
+                            </div>
+                        <div class="rating-text" id="ratingText">Отлично!</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Ваш отзыв</label>
+                        <textarea id="reviewText" rows="4" placeholder="Расскажите о вашем опыте..." maxlength="300" required></textarea>
+                        <div class="char-count"><span id="charCount">0</span> / 300</div>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span>💬</span>
+                        <span>Отправить отзыв</span>
+                    </button>
+                    <p class="form-note">❗ Плохие слова автоматически заменяются на ***</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <p><span class="logo-e">E</span><span class="logo-lite">Lite</span> Studio © 2024 — Создаём эмоции</p>
+            <div class="footer-links">
+                <a href="https://t.me/+riiZK5ONVAUzMDYy" target="_blank">📢 Наш канал</a>
+                <span>|</span>
+                <a href="https://t.me/Lucifer_Knyazev" target="_blank">💬 Написать нам</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Telegram float button -->
+    <a href="https://t.me/Lucifer_Knyazev" target="_blank" class="telegram-float">
+        <span>✈️</span>
+        <span class="telegram-tooltip">Написать в Telegram</span>
+    </a>
+
+    <!-- Уведомление -->
+    <div class="notification" id="notification">
+        <div class="notification-icon">✅</div>
+        <div>
+            <div class="notification-title" id="notifTitle">Готово!</div>
+            <div class="notification-text" id="notifText">Переходим в Telegram</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
